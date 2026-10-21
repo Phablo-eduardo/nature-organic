@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cadastro</title><link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"><link rel="stylesheet" th:href="@{/css/style.css}"><link rel="stylesheet" th:href="@{/css/login.css}"></head>
+<body class="auth-page">
+<div class="auth-card" style="max-width:520px"><div class="card-body">
+<div class="auth-eyebrow">Novo acesso</div><h1 class="h4 mb-4">Criar usuário</h1><div th:if="${msg}" class="alert alert-danger" th:text="${msg}"></div>
+<form th:action="@{/salvarUsuario}" th:object="${usuario}" method="post">
+<div class="mb-3"><label class="form-label">E-mail</label><input type="email" class="form-control" th:field="*{email}"><div class="text-danger small" th:errors="*{email}"></div></div>
+<div class="mb-3"><label class="form-label">Usuário</label><input class="form-control" th:field="*{user}"><div class="text-danger small" th:errors="*{user}"></div></div>
+<div class="mb-3"><label class="form-label">Senha</label><input type="password" class="form-control" th:field="*{senha}"><div class="text-danger small" th:errors="*{senha}"></div></div>
+<div class="d-flex gap-2"><a th:href="@{/}" class="btn btn-secondary">Voltar</a><button class="btn btn-success">Cadastrar</button></div>
+</form></div></div>
+</body></html>

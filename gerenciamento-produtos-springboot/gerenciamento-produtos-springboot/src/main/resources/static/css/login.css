@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.auth-page {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at top left, #ccfbf1 0, #f4f7fb 45%, #e0f2fe 100%);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 20px;
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 22px 55px rgba(15, 23, 42, .14);
+}
+
+.auth-card .card-body { padding: 2.25rem; }
+.auth-card h1 { margin-bottom: .5rem; }
+.auth-card .btn { min-height: 46px; }
+.auth-eyebrow {
+    margin-bottom: 1.25rem;
+    color: #0f766e;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}

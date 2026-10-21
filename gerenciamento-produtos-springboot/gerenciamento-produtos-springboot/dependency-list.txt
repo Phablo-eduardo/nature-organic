@@ -1,0 +1,13 @@
+
+The following files have been resolved:
+   org.springframework.boot:spring-boot-starter-web:jar:3.5.4:compile -- module spring.boot.starter.web [auto]
+   org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.4:compile -- module spring.boot.starter.thymeleaf [auto]
+   org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.4:compile -- module spring.boot.starter.data.jpa [auto]
+   org.springframework.boot:spring-boot-starter-validation:jar:3.5.4:compile -- module spring.boot.starter.validation [auto]
+   org.springframework.boot:spring-boot-devtools:jar:3.5.4:runtime (optional) -- module spring.boot.devtools [auto]
+   com.h2database:h2:jar:2.3.232:runtime -- module com.h2database [auto]
+   com.mysql:mysql-connector-j:jar:9.3.0:runtime -- module mysql.connector.j (auto)
+   org.webjars:webjars-locator:jar:0.52:compile -- module webjars.locator (auto)
+   org.webjars:bootstrap:jar:5.3.3:compile -- module bootstrap (auto)
+   org.webjars.bower:jquery:jar:3.6.0:compile -- module jquery (auto)
+

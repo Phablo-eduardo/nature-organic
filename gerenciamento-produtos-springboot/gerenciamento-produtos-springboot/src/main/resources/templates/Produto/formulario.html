@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${produto.id == null ? 'Novo produto' : 'Editar produto'}">Produto</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="bg-light">
+<div th:replace="~{fragmentos/fragmentos :: cabecalho}"></div>
+<div class="container py-4">
+    <div class="card shadow-sm mx-auto" style="max-width:700px">
+        <div class="card-body p-4">
+            <h1 class="h4 mb-4" th:text="${produto.id == null ? 'Cadastrar produto' : 'Editar produto'}">Produto</h1>
+            <form th:action="@{/produtos/salvar}" th:object="${produto}" method="post" enctype="multipart/form-data">
+                <input type="hidden" th:field="*{id}">
+                <div class="mb-3"><label class="form-label">Nome</label><input class="form-control" th:field="*{nome}"><div class="text-danger small" th:errors="*{nome}"></div></div>
+                <div class="mb-3"><label class="form-label">Código de barras</label><input class="form-control" th:field="*{codigoBarras}"><div class="text-danger small" th:errors="*{codigoBarras}"></div></div>
+                <div class="row">
+                    <div class="col-md-6 mb-3"><label class="form-label">Preço</label><input type="number" step="0.01" min="0" class="form-control" th:field="*{preco}"><div class="text-danger small" th:errors="*{preco}"></div></div>
+                    <div class="col-md-6 mb-3"><label class="form-label">Estoque</label><input type="number" min="0" class="form-control" th:field="*{quantidadeEstoque}"><div class="text-danger small" th:errors="*{quantidadeEstoque}"></div></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="imagemArquivo">Imagem do produto</label>
+                    <input id="imagemArquivo" name="imagemArquivo" type="file" accept="image/*" class="form-control">
+                    <div class="form-text">Opcional. Formatos de imagem até 5 MB.</div>
+                    <div class="text-danger small" th:if="${#fields.hasGlobalErrors()}" th:each="erro : ${#fields.globalErrors()}" th:text="${erro}"></div>
+                    <img th:if="${produto.id != null and produto.imagem != null}" th:src="@{/produtos/{id}/imagem(id=${produto.id})}" class="product-form-image mt-2" alt="Imagem atual do produto">
+                </div>
+                <div class="d-flex gap-2"><a th:href="@{/produtos}" class="btn btn-secondary">Cancelar</a><button class="btn btn-success">Salvar</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

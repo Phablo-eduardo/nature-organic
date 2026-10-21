@@ -1,0 +1,14 @@
+br\com\gerenciamento\controller\ProdutoController.class
+br\com\gerenciamento\exception\ServiceExc.class
+br\com\gerenciamento\service\ServiceUsuario.class
+br\com\gerenciamento\exception\CriptoExistsException.class
+br\com\gerenciamento\repository\UsuarioRepository.class
+br\com\gerenciamento\model\Produto.class
+br\com\gerenciamento\exception\EmailExistsException.class
+br\com\gerenciamento\controller\DashboardController.class
+br\com\gerenciamento\model\Venda.class
+br\com\gerenciamento\repository\ProdutoRepository.class
+br\com\gerenciamento\model\Usuario.class
+br\com\gerenciamento\repository\VendaRepository.class
+br\com\gerenciamento\util\Util.class
+br\com\gerenciamento\controller\UsuarioController.class

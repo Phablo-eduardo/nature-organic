@@ -1,0 +1,15 @@
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\controller\DashboardController.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\controller\ProdutoController.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\controller\UsuarioController.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\exception\CriptoExistsException.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\exception\EmailExistsException.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\exception\ServiceExc.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\GerenciamentoProdutosApplication.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\model\Produto.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\model\Usuario.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\model\Venda.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\repository\ProdutoRepository.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\repository\UsuarioRepository.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\repository\VendaRepository.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\service\ServiceUsuario.java
+C:\Users\phabl\Desktop\gerenciamento-produtos-springboot-corrigido\gerenciamento-produtos-springboot\gerenciamento-produtos-springboot\src\main\java\br\com\gerenciamento\util\Util.java

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel - Gerenciamento de Produtos</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="~{fragmentos/fragmentos :: cabecalho}"></div>
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <div class="eyebrow">Visão geral</div>
+            <h1 class="h3 mb-1">Painel de controle</h1>
+            <p class="text-muted mb-0">Acompanhe seu estoque e o desempenho das vendas.</p>
+        </div>
+        <a th:href="@{/produtos/novo}" class="btn btn-success">+ Novo produto</a>
+    </div>
+    <div class="row g-3 mb-4">
+        <div class="col-md-3"><div class="card shadow-sm"><div class="card-body"><div class="text-muted">Produtos</div><div class="fs-3 fw-bold" th:text="${totalProdutos}">0</div></div></div></div>
+        <div class="col-md-3"><div class="card shadow-sm"><div class="card-body"><div class="text-muted">Ativos</div><div class="fs-3 fw-bold text-success" th:text="${produtosAtivos}">0</div></div></div></div>
+        <div class="col-md-3"><div class="card shadow-sm"><div class="card-body"><div class="text-muted">Inativos</div><div class="fs-3 fw-bold text-secondary" th:text="${produtosInativos}">0</div></div></div></div>
+        <div class="col-md-3"><div class="card shadow-sm"><div class="card-body"><div class="text-muted">Itens em estoque</div><div class="fs-3 fw-bold" th:text="${totalEstoque}">0</div></div></div></div>
+    </div>
+    <div class="row g-3">
+        <div class="col-lg-8"><div class="card shadow-sm"><div class="card-body">
+            <h2 class="h5">Ações rápidas</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <a th:href="@{/produtos}" class="btn btn-primary">Listar produtos</a>
+                <a th:href="@{/produtos/ativos}" class="btn btn-outline-success">Ver ativos</a>
+                <a th:href="@{/produtos/inativos}" class="btn btn-outline-secondary">Ver inativos</a>
+            </div>
+        </div></div></div>
+        <div class="col-lg-4"><div class="card shadow-sm sales-card"><div class="card-body">
+            <div class="section-kicker">Desempenho</div>
+            <h2 class="h5 mb-3">Resumo de vendas</h2>
+            <div class="sales-metric">
+                <span>Média por venda</span>
+                <strong>R$ <span th:text="${#numbers.formatDecimal(mediaVendas, 1, 2)}">0,00</span></strong>
+            </div>
+            <div class="sales-metric">
+                <span>Vendas mensais</span>
+                <strong>R$ <span th:text="${#numbers.formatDecimal(vendasMensais, 1, 2)}">0,00</span></strong>
+            </div>
+            <div class="sales-metric">
+                <span>Vendas anuais</span>
+                <strong>R$ <span th:text="${#numbers.formatDecimal(vendasAnuais, 1, 2)}">0,00</span></strong>
+            </div>
+        </div></div></div>
+    </div>
+</div>
+<div th:replace="~{fragmentos/fragmentos :: rodape}"></div>
+</body>
+</html>

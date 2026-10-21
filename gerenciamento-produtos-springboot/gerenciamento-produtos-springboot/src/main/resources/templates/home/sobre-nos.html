@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre nós | Nature Organic</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="storefront-page">
+<header class="storefront-nav">
+    <div class="container d-flex align-items-center justify-content-between gap-3">
+        <a class="storefront-brand" th:href="@{/}">
+            <span class="brand-logo"><img th:src="@{/img/logo.jpeg}" alt="Logo Nature Organic"></span>
+            <span>Nature Organic</span>
+        </a>
+        <a class="btn btn-outline-light btn-sm" th:href="@{/}">Página inicial</a>
+    </div>
+</header>
+
+<main class="container py-5">
+    <section class="about-placeholder">
+        <div class="eyebrow">Nature Organic</div>
+        <h1>Sobre nós</h1>
+        <p class="lead text-muted">Na Nature Organic, acreditamos que cuidar dos cabelos é também cuidar da autoestima.</p>
+        <p>Nascemos com o propósito de tornar o cuidado capilar mais acessível, completo e personalizado, oferecendo produtos selecionados para diferentes necessidades dos fios, desde hidratação, nutrição e reconstrução até cuidados com crescimento, fortalecimento, oleosidade e couro cabeludo.</p>
+        <p>Mais do que vender produtos, queremos ajudar você a encontrar uma rotina que realmente faça sentido para o seu cabelo.</p>
+        <p>Por isso, trabalhamos com linhas e tratamentos pensados para transformar o cuidado diário em um momento de autocuidado, beleza e confiança.</p>
+
+        <div class="text-start mt-5">
+            <h2 class="h4">Nosso propósito</h2>
+            <p>Entregar qualidade, cuidado e resultado, sempre buscando produtos que aliem tecnologia, ativos e tratamentos específicos para cada necessidade.</p>
+            <p>Acreditamos que cada cabelo é único. Por isso, não existe uma única rotina perfeita para todo mundo: existe o cuidado certo para cada pessoa.</p>
+
+            <h2 class="h4 mt-4">Nossa essência</h2>
+            <p class="fw-bold">Cuidar. Tratar. Transformar.</p>
+            <p>A Nature Organic está aqui para acompanhar você em cada etapa da sua jornada capilar, ajudando a escolher os produtos certos e tornando o cuidado com os fios mais simples e prazeroso.</p>
+        </div>
+
+        <p class="fw-semibold mt-4 mb-4">Nature Organic, seu cabelo, seu cuidado, sua melhor versão.</p>
+        <a class="btn btn-storefront" th:href="@{/}">Voltar para a página inicial</a>
+    </section>
+</main>
+</body>
+</html>

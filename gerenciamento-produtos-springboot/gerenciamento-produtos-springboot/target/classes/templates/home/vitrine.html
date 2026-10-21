@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nature Organic | Produtos capilares</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="storefront-page">
+<header class="storefront-nav">
+    <div class="container d-flex align-items-center justify-content-between gap-3">
+        <a class="storefront-brand" th:href="@{/}">
+            <span class="brand-logo"><img th:src="@{/img/logo.jpeg}" alt="Logo Nature Organic"></span>
+            <span>Nature Organic</span>
+        </a>
+        <div class="d-flex align-items-center gap-2">
+            <a class="storefront-link d-none d-md-inline" href="#produtos">Produtos</a>
+            <a class="btn btn-outline-light btn-sm" th:href="@{/login}">Área restrita</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="storefront-hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="eyebrow">Cuidados para seus cabelos</div>
+                    <h1>Seu cabelo merece cuidado, força e beleza.</h1>
+                    <p class="lead">Conheça a linha Nature Organic: produtos capilares para cuidar, tratar e valorizar a beleza dos seus fios.</p>
+                    <a class="btn btn-storefront" href="#produtos">Conhecer produtos</a>
+                </div>
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <a class="hero-logo-wrap" th:href="@{/sobre-nos}" aria-label="Conheça a Nature Organic">
+                        <img class="hero-logo" th:src="@{/img/logo.jpeg}" alt="Nature Organic">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="container storefront-products py-5">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+            <div>
+                <div class="eyebrow">Linha capilar</div>
+                <h2 class="mb-1">Produtos em destaque</h2>
+                <p class="text-muted mb-0">Encontre o cuidado ideal para a sua rotina capilar.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-4" th:each="produto : ${produtos}">
+                <article class="product-card h-100">
+                    <div class="product-card-top">
+                        <span class="product-badge">Disponível</span>
+                        <span class="product-stock" th:text="${produto.quantidadeEstoque + ' em estoque'}">Disponível</span>
+                    </div>
+                    <img th:if="${produto.imagem != null}" class="product-image" th:src="@{/produtos/{id}/imagem(id=${produto.id})}" th:alt="${produto.nome}">
+                    <div th:unless="${produto.imagem != null}" class="product-icon">◆</div>
+                    <h3 th:text="${produto.nome}">Produto</h3>
+                    <p class="text-muted product-code" th:text="${'Código: ' + produto.codigoBarras}">Código</p>
+                    <div class="product-card-footer">
+                        <strong th:text="${'R$ ' + #numbers.formatDecimal(produto.preco, 1, 2)}">R$ 0,00</strong>
+                        <a class="btn btn-sm btn-outline-storefront" th:href="@{/login}">Tenho interesse</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div th:if="${#lists.isEmpty(produtos)}" class="empty-catalog">
+            <div class="product-icon">◆</div>
+            <h3>Estamos preparando novidades</h3>
+            <p class="text-muted mb-0">Em breve teremos produtos disponíveis para você.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="storefront-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span>Nature Organic</span>
+        <span>Cuidado que valoriza seus fios.</span>
+    </div>
+</footer>
+</body>
+</html>

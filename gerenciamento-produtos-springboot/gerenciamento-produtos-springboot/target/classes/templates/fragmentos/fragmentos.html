@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="cabecalho">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" th:href="@{/index}">
+                <span class="brand-logo"><img th:src="@{/img/logo.jpeg}" alt="Logo Nature Organic"></span>
+                <span class="ms-2">Nature Organic</span>
+            </a>
+            <div class="d-flex gap-2 align-items-center">
+                <a class="btn btn-outline-light btn-sm" th:href="@{/index}">Início</a>
+                <a class="btn btn-light btn-sm" th:href="@{/produtos}">Produtos</a>
+                <form th:action="@{/logout}" method="post" class="m-0">
+                    <button type="submit" class="btn btn-danger btn-sm">Sair</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<footer th:fragment="rodape" class="py-4 text-center text-muted">
+    <small>Nature Organic &copy; 2026 - Phablo Eduardo</small>
+</footer>
+</body>
+</html>
